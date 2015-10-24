@@ -1,0 +1,19 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bcrypt (3.1.10)
+    byebug (6.0.2)
+    minitest (5.8.1)
+    rake (10.4.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bcrypt
+  byebug
+  minitest
+  rake
+
+BUNDLED WITH
+   1.10.6
