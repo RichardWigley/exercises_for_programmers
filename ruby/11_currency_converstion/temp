@@ -1,0 +1,24 @@
+require 'open-uri'
+require 'json'
+require 'dotenv'
+Dotenv.load
+
+class Weather
+  Report = Struct.new(:temperature)
+
+  def initialize(options={})
+    @cache = options.fetch(:cache) { {} }
+  end
+
+  def report(query)
+    key = 'ad1d57a7893cc501'
+    url = "http://api.wunderground.com/api/#{key}/conditions/q/#{query}.json"
+    body = @cache.fetch(query) {
+      @cache[query] = open(url).read
+    }
+    data = JSON.parse(body)
+    Report.new(data['current_observation']['temp_f'])
+  end
+end
+
+puts Weather.new.report('United_Kingdom/London')
