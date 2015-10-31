@@ -1,0 +1,29 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.3.8)
+    byebug (6.0.2)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
+    dotenv (2.0.2)
+    hashdiff (0.2.2)
+    minitest (5.8.2)
+    rake (10.4.2)
+    safe_yaml (1.0.4)
+    webmock (1.22.2)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  byebug
+  dotenv
+  minitest
+  rake
+  webmock
+
+BUNDLED WITH
+   1.10.6
